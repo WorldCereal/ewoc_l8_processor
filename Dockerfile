@@ -37,7 +37,7 @@ RUN apt-get update -y \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install --no-cache-dir --upgrade \
+RUN python3 -m pip install --no-cache-dir --upgrade pip \
       && python3 -m pip install --no-cache-dir virtualenv
 
 #------------------------------------------------------------------------
