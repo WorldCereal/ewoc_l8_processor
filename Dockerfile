@@ -2,9 +2,6 @@
 #
 #   Copyright 2021 (c) CS Group France. All rights reserved.
 #
-#   This file is part of S1Tiling project
-#       https://gitlab.orfeo-toolbox.org/s1-tiling/s1tiling
-#
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
 #   You may obtain a copy of the License at
@@ -55,11 +52,10 @@ COPY ewoc_dag-${EWOC_DAG_VERSION}.tar.gz /tmp
 
 SHELL ["/bin/bash", "-c"]
 
-ENV EWOC_S1_VENV=/opt/ewoc_l8_venv
-RUN python3 -m virtualenv ${EWOC_S1_VENV} \
-      && . ${OTB_INSTALL_DIRPATH}/otbenv.profile \
-      && source ${EWOC_S1_VENV}/bin/activate \
-      && pip install --no-cache-dir /tmp/ewoc_s1-${EWOC_S1_VERSION}.tar.gz --find-links /tmp \
+ENV EWOC_L8_VENV=/opt/ewoc_l8_venv
+RUN python3 -m virtualenv ${EWOC_L8_VENV} \
+      && source ${EWOC_L8_VENV}/bin/activate \
+      && pip install --no-cache-dir /tmp/ewoc_l8-${EWOC_L8_VERSION}.tar.gz --find-links /tmp \
       && pip install --no-cache-dir psycopg2-binary \
       && pip install --no-cache-dir rfc5424-logging-handler
 
