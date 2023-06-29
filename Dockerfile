@@ -55,7 +55,7 @@ SHELL ["/bin/bash", "-c"]
 ENV EWOC_L8_VENV=/opt/ewoc_l8_venv
 RUN python3 -m virtualenv ${EWOC_L8_VENV} \
       && source ${EWOC_L8_VENV}/bin/activate \
-      && pip install --no-cache-dir /tmp/ewoc_l8-${EWOC_L8_VERSION}.tar.gz --find-links /tmp \
+      && pip install --no-cache-dir /tmp/ewoc_l8-${EWOC_L8_VERSION}.tar.gz --find-links=/tmp \
       && pip install --no-cache-dir psycopg2-binary \
       && pip install --no-cache-dir rfc5424-logging-handler
 
