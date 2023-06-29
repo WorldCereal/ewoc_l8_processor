@@ -49,6 +49,7 @@ LABEL EWOC_DAG="${EWOC_DAG_VERSION}"
 
 # Copy private python packages
 COPY ewoc_dag-${EWOC_DAG_VERSION}.tar.gz /tmp
+COPY ewoc_l8-${EWOC_L8_VERSION}.tar.gz /tmp
 
 SHELL ["/bin/bash", "-c"]
 
