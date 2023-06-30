@@ -42,7 +42,7 @@ RUN python3 -m pip install --no-cache-dir --upgrade pip \
 
 #------------------------------------------------------------------------
 ## Install python packages
-ARG EWOC_L8_VERSION=0.9.2
+ARG EWOC_L8_VERSION=0.10.0
 LABEL EWOC_L8="${EWOC_L8_VERSION}"
 ARG EWOC_DAG_VERSION=0.9.3
 LABEL EWOC_DAG="${EWOC_DAG_VERSION}"
